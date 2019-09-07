@@ -29,6 +29,7 @@ namespace SynchronizationPrimitives
                               "\nto release all the threads.\n");
             Console.ReadLine();
 
+            Console.WriteLine("set");
             mre.Set();
 
             Thread.Sleep(500);
@@ -48,6 +49,7 @@ namespace SynchronizationPrimitives
                               "\nwhen they call WaitOne().\n");
             Console.ReadLine();
 
+            Console.WriteLine("reste");
             mre.Reset();
 
             // Start a thread that waits on the ManualResetEvent.
@@ -59,6 +61,7 @@ namespace SynchronizationPrimitives
             Console.WriteLine("\nPress Enter to call Set() and conclude the demo.");
             Console.ReadLine();
 
+            Console.WriteLine("set");
             mre.Set();
 
             // If you run this example in Visual Studio, uncomment the following line:

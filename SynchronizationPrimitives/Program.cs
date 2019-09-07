@@ -14,7 +14,41 @@ namespace SynchronizationPrimitives
     {
         static void Main(string[] args)
         {
-            MonitorExample.DoWork();
+            AutoResetEventExample.DoWork();
+
+            /*
+            //MonitorExample.DoWork();
+            // AutoResetEventExample.DoWork();
+
+            // var obj = new object();
+            var ev1 = new System.Threading.AutoResetEvent(false);
+            var ev2 = new System.Threading.AutoResetEvent(false);
+
+            var th = new Thread(() => {
+                for (int j = 0; ; j++)
+                {
+                    Console.WriteLine("waiting");
+                    ev1.WaitOne();
+
+                    Console.WriteLine("continued");
+                    ev2.Set();
+                }
+            }) {
+                IsBackground = true
+            };
+            th.Start();
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("setting");
+                ev1.Set();
+                ev2.WaitOne();
+            }
+
+            Console.ReadKey();
+
+    */
         }
     }
 }

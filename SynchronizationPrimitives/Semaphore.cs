@@ -45,7 +45,6 @@ namespace SynchronizationPrimitives
                 }
                 _counter++;
             }
-            
         }
 
         public int Release()
@@ -61,7 +60,6 @@ namespace SynchronizationPrimitives
             _spinlock.Exit();
             _guard.Set();
             return counter;
-
         }
 
         public int Release(int count)
